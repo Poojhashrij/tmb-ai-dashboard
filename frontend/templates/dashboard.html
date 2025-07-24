@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+</head>
+<body>
+    <h2>Analysis Results for {{ meta.patient_id }}</h2>
+    <p>Cancer Type: {{ meta.cancer_type }}</p>
+    <p>Gender: {{ meta.gender }}</p>
+    <hr>
+    <h3>TMB Score: {{ tmb }} mutations/Mb</h3>
+    <h3>MSI Score: {{ msi }}%</h3>
+    <h3>Immunotherapy Prediction: {{ prediction }}</h3>
+</body>
+</html>

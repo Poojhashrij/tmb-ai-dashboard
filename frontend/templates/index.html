@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TMB Platform</title>
+</head>
+<body>
+    <h1>Tumor Mutational Burden Calculator</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label>Patient ID: <input type="text" name="patient_id" required></label><br><br>
+        <label>Cancer Type: <input type="text" name="cancer_type" required></label><br><br>
+        <label>Gender:
+            <select name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </label><br><br>
+        <label>Upload VCF File: <input type="file" name="vcf_file" required></label><br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
