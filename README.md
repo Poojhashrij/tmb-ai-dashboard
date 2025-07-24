@@ -18,13 +18,21 @@ This project is a smart bioinformatics web application that calculates **Tumor M
 
 ## 📁 Project Structure
 ├── backend/ # Python APIs for ML, data parsing, and API integration
+
 ├── data/ # Sample VCF and test data files
+
 ├── frontend/ # HTML, CSS, JS files for UI (Flask templates/static)
+
 ├── model/ # Trained ML model (pickle or h5)
+
 ├── venv/ # Python virtual environment
+
 ├── .dist/ # Compiled or packaged app (if applicable)
+
 ├── requirements.txt # List of required Python libraries
+
 ├── train_model.py # Script to train ML model on TMB data
+
 ├── test_cbio.py # Test script for cBioPortal integration (optional)
 
 yaml
