@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TMB Predictor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: #e0e0e0;
+      margin-bottom: 30px;
+    }
+
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.08);
+      padding: 30px 35px;
+      border-radius: 15px;
+      width: 400px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 15px;
+      display: block;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: none;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    input::placeholder {
+      color: #ccc;
+    }
+
+    select {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 12px;
+      background: #00c6ff;
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease-in-out;
+    }
+
+    button:hover {
+      background: #0072ff;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #ccc;
+      text-align: center;
+    }
+
+    .footer span {
+      font-weight: bold;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🧬 TMB Prediction Platform</h1>
+  <p class="subtitle">Upload a VCF file to estimate Tumor Mutational Burden and predict response to immunotherapy.</p>
+
+  <form class="form-container" action="/upload" method="POST" enctype="multipart/form-data">
+    <label for="vcf_file">VCF File</label>
+    <input type="file" name="vcf_file" required accept=".vcf,.vcf.gz">
+
+    <label for="patient_id">Patient ID</label>
+    <input type="text" name="patient_id" placeholder="e.g. P-0001234" required>
+
+    <label for="cancer_type">Cancer Type</label>
+    <input type="text" name="cancer_type" placeholder="e.g. Lung, Melanoma" required>
+
+    <label for="gender">Gender</label>
+    <select name="gender" required>
+      <option value="">Select</option>
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+
+    <button type="submit">🔍 Analyze</button>
+  </form>
+
+  <div class="footer">
+    Created by <span>Poojhashri J</span> 🧠💡
+  </div>
+
+</body>
+</html>
